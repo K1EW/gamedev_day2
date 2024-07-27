@@ -1,0 +1,29 @@
+[gd_scene load_steps=2 format=3 uid="uid://cssg5spgrdvow"]
+
+[ext_resource type="Script" path="res://scripts/GamePlayUI.gd" id="1_wye0h"]
+
+[node name="Gameplay" type="Control" node_paths=PackedStringArray("collected_coin_label", "health_bar")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wye0h")
+collected_coin_label = NodePath("CollectedCoinLabel")
+health_bar = NodePath("HealthBar")
+
+[node name="CollectedCoinLabel" type="Label" parent="."]
+layout_mode = 1
+offset_top = 21.0
+offset_right = 40.0
+offset_bottom = 44.0
+text = "0"
+horizontal_alignment = 1
+
+[node name="HealthBar" type="ProgressBar" parent="."]
+layout_mode = 0
+offset_right = 162.0
+offset_bottom = 20.0
+value = 50.0
+show_percentage = false
